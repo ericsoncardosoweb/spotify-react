@@ -1,0 +1,43 @@
+/**
+*
+* Variáveis do tema
+*
+*/
+
+/*----------  Fonts  ----------*/
+$font-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-primary: 'Roboto', sans-serif;
+
+$font-sans: $font-primary;
+$font-serif: $font-primary;
+$font-coursive: $font-primary;
+$font-condensed: $font-primary;
+
+$font-text: $font-primary;
+$font-title: $font-primary;
+$font-feature: $font-primary;
+$font-button: $font-primary;
+
+$font-size: 14px;
+$font-w: 400;
+$font-lh: 1.334;
+
+/*----------  Grids  ----------*/
+$grid-gutter: 20px;
+$container-width: 1190px + ($grid-gutter * 2);
+
+
+/*----------  Devices  ----------*/
+$mobile-large: 719px;
+$mobile: 420px;
+$mobile-small: 360px;
+
+$tablet-large: 1023px;
+$tablet: 992px;
+$tablet-small: 720px;
+
+$desktop-large: 1720px;
+$desktop: 1240px;
+$desktop-small: 1024px;
+
+$start-mobile: 1020px;

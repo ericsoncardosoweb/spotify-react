@@ -1,0 +1,76 @@
+/* Forms */
+@include form_fields() {
+  border: 1px solid #FFF;
+  background: #FFF;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 15px;
+  width: 100%;
+  transition: all 0.5s;
+  outline: none;
+  font-size: em(14);
+
+  &:focus{
+    border-color: palette(brand, primary);
+    box-shadow: none;
+    outline: none;
+  }
+
+  @include placeholder{
+    color: palette(text, default);
+  }
+}
+
+.search{
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+
+  &:before, &:after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+  
+  &:before{
+    background: palette(border, default);
+  }
+
+  &:after{
+    transform: translateX(-100%);
+    background: palette(border, light);
+    transition: all 0.9s;
+  }
+
+  &.focus{
+    &:after{
+      transform: translateX(0);
+    }
+  }
+  
+
+  label{
+    color: palette(text, light);
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 5px;
+  }
+
+  input{
+    border: 0;
+    background: transparent;
+    font-size: em(48);
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    color: palette(text, ice);
+
+    @include placeholder{
+      color: palette(text, default);
+    }
+  }
+
+}

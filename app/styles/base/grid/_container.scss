@@ -1,0 +1,22 @@
+.container:not(.is-fluid) {
+  max-width: $container-width;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  &.medium{
+    max-width: $container-width - $container-width / 3;
+  }
+
+  &.small{
+    max-width: $container-width - $container-width / 2;
+  }
+
+  &.large{
+    max-width: 1700px;
+  }
+
+
+@include clearfix();
+}

@@ -1,0 +1,24 @@
+/**
+ *
+ * Main Style
+ *
+* */ 
+
+@import "settings/all"; 
+ 
+// Layout
+@import "utils/all";
+@import "base/resets/all";
+@import "base/grid/all";
+@import "base/typography/all";
+@import "media/all";
+@import "custom/all";
+@import "utils/all";
+@import "custom/all";
+@import "media/all"; 
+
+// Components
+@import "components/card/all";
+@import "components/sidebar/all";
+@import "components/forms/all";
+// @import "components/footer/all";

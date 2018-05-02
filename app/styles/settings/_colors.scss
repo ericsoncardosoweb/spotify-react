@@ -1,0 +1,43 @@
+﻿$palettes: (
+    grey: (
+        black: #000,
+        heavy: #222,
+        dark: #666,
+        base: #888,
+        light: #c5cad0,
+        clean: #eee,
+        ice: #f5f5f5,
+        white: #fff,
+    ),
+    brand: (
+        primary: #161616, //Principal
+        secondary: #000, //Alternativa
+        accent: #999, //Destaque com a cor principal
+        contrast: #fafafa, //Contraste com a cor principal
+        highlight: #fff, //Destaque
+    ),
+    text: (
+        primary: #161616,
+        secondary: #000,
+        default: #999,
+        light: #fafafa,
+        ice: #fff,
+    ),
+    border: (
+        default: #585858,
+        light: #ddd,
+        clean: #eee,
+        dark: #222
+    ),
+    stage: (
+        success: #1dca65,
+        danger: #c82d2d,
+        alert: #d29f2c,
+        warning: #e2821b,
+        info: #2cbbd2,
+    )
+);
+
+
+// Colors Variables
+$bg-body: palette(brand, primary);
