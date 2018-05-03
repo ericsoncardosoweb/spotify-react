@@ -1,27 +1,25 @@
-import React from 'react';
-import ReactDom from 'react-dom'; 
+import React, { PropTypes } from 'react';
 
-const Card = ({children, props}) => {
-  
-    return (
-      <div className="card">
-        <div className="card__figure">
-          <a href="#">
-            <img src="http://via.placeholder.com/172x172"/>
-          </a>
-        </div>
+const Card = ({link, image, title, description}) => (
+  <div className="card">
+    <div className="card__figure">
+      <a href={link}>
+        <img src={image}/>
+      </a>
+    </div>
 
-        <div className="card__content">
-          <h4 className="card__title"><a href="#">Nome do álbum</a></h4>
-          <p><a href="#">Nome do artista</a></p>
-        </div>
-      </div> 
-    );                               
-};
+    <div className="card__content">
+      <h4 className="card__title"><a href={link}>{title}</a></h4>
+      <p><a href={link}>{description}</a></p>
+    </div>
+  </div> 
+)
 
-Card.propTypes = {
-  // loading : React.PropTypes.bool,
-  // items : React.PropTypes.array
+Card.PropTypes = {
+  link: PropTypes.string.isRequired, 
+  image: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired, 
+  description: PropTypes.string.isRequired
 }
 
 export default Card;
