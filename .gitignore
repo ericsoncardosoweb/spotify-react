@@ -1,5 +1,7 @@
-node_modules
-public
-app/bundles
+.DS_STORE
 *.log
-packcage-lock.json
+node_modules
+dist
+coverage
+.idea/
+.yarn-cache

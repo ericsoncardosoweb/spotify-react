@@ -1,0 +1,94 @@
+@import '../../styles/settings/all';
+
+/* Cards */
+.cards{
+  margin-bottom: 25px;
+
+  &__title{
+    color: palette(text, ice);
+    font-weight: 400;
+    font-size: em(24);
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &__item{
+      min-width: 150px;
+      flex: 0 0 20%;
+      max-width: 20%;
+      margin: 0;
+      padding: 25px 10px;
+    }
+  }
+}
+
+/* Card */
+.card{
+
+  &__figure{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: table;
+    width: auto;
+    margin: 0 auto;
+
+    &:before{
+      content: "";
+      background: #fff;
+      width: 80px;
+      height: 180%;
+      left: calc(-120% + 40px);
+      opacity: .35;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all .55s cubic-bezier(.19,1,.22,1);
+      z-index: 2;
+    }
+
+    a{
+      display: block;
+    }
+
+    img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }    
+
+  &__content{
+    text-align: center;
+    padding: 7px 0 0;
+  }
+
+  &__title{
+    font-size: em(16);
+    color: palette(text, ice);
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  p{
+    color: palette(text, default);
+    font-size: em(16);
+    margin-bottom: 0;
+  }
+
+  @include linkreset();
+
+  /******* Hover *******/
+  &:hover{
+    .card__figure{
+      &:before {
+        left: calc(120% + 60px);
+        transition: all .55s cubic-bezier(.19,1,.22,1);
+      }
+    }
+  }
+}

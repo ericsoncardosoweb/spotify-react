@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./assets/Flaticon.eot");
+  src: url("./assets/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./assets/Flaticon.woff") format("woff"),
+       url("./assets/Flaticon.ttf") format("truetype"),
+       url("./assets/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./assets/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.icon:before{
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-search:before { content: "\f100"; }
+.icon-history-clock-button:before { content: "\f101"; }
+.icon-black:before { content: "\f102"; }
+.icon-arrows-3:before { content: "\f103"; }
+.icon-bars:before { content: "\f104"; }
+.icon-arrows-2:before { content: "\f105"; }
+.icon-player:before { content: "\f106"; }
+.icon-left-arrow-key:before { content: "\f107"; }
+.icon-arrows-1:before { content: "\f108"; }
+.icon-arrows:before { content: "\f109"; }
+.icon-spotify:before { content: "\f10a"; }
+
+$font-icon-search: "\f100";
+$font-icon-history-clock-button: "\f101";
+$font-icon-black: "\f102";
+$font-icon-arrows-3: "\f103";
+$font-icon-bars: "\f104";
+$font-icon-arrows-2: "\f105";
+$font-icon-player: "\f106";
+$font-icon-left-arrow-key: "\f107";
+$font-icon-arrows-1: "\f108";
+$font-icon-arrows: "\f109";
+$font-icon-spotify: "\f10a";

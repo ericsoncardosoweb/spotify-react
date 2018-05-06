@@ -1,0 +1,52 @@
+/*----------  Icon sizes  ----------*/
+$icon-size: 15px 40px 60px;
+$icon-name: small medium large;
+.svg{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+
+  @for $i from 1 through length(icon-size) {
+    &.is-#{nth($icon-name, $i)} {
+      width: nth(icon-size, $i);
+      height: nth(icon-size, $i);
+    }
+  }
+
+  path, use, circle, rect, g {
+    fill: inherit!important;
+    stroke: inherit!important;
+  } 
+}
+
+svg.inherit {
+  path, use, circle, rect, g {
+    fill: inherit!important;
+    stroke: inherit!important;
+  }
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
