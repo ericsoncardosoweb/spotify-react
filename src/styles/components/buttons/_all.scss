@@ -1,0 +1,86 @@
+// Elementos originais devem ser resetados para evitar interferências dos browsers
+
+button, input[type=submit], input[type=reset], input[type=button]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: 0;
+  box-shadow: none;
+  line-height: inherit;
+  font-size: inherit;
+  background:transparent;
+  cursor: pointer;
+
+  &:focus, &:active, &:hover{
+    border: 0;
+    outline: none!important;
+    box-shadow: none;
+  }
+
+  &:disabled{
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  *{
+    cursor: inherit;
+  }
+}
+
+// Buttons Variables
+$btn-ff: $font-primary;
+$btn-fw: 400;
+$btn-bd: 1px;
+$btn-bd-radius: 6px;
+$btn-min-w: 200px;
+$btn-gutter: 16; // (px) define espaçamento dos botões
+
+$btn-fz: 14px;
+$btn-fz-mini: em(9);
+$btn-fz-tiny: em(11);
+$btn-fz-small: em(13);
+$btn-fz-medium: em(16);
+$btn-fz-large: em(20);
+$btn-fz-big: em(24);
+$btn-fz-huge: em(28);
+$btn-fz-massive: em(32);
+
+$btnsizes: (
+  "mini": $btn-fz-mini,
+  "tiny": $btn-fz-tiny,
+  "small": $btn-fz-small,
+  "medium": $btn-fz-medium,
+  "large": $btn-fz-large,
+  "big": $btn-fz-big,
+  "huge": $btn-fz-huge,
+  "massive": $btn-fz-massive,
+);
+
+$btncolors: (
+  "primary": palette(brand, primary),
+  "primary-light": palette(brand, primary-light),
+  "light": palette(brand, light),
+  "secondary": palette(brand, secondary),
+  "contrast": palette(brand, contrast),
+  "accent": palette(brand, accent),
+  "hightlight": palette(brand, hightlight),
+  "clean": palette(brand, clean),
+  "success": palette(stage, success),
+  "danger": palette(stage, danger),
+  "info": palette(stage, info),
+  "warning": palette(stage, warning),
+  "facebook": $color-facebook,
+  "twitter": $color-twitter,
+  "whatsapp": $color-whatsapp,
+  "white": #FFF
+);
+
+// Imports
+@import "colors";
+@import "helpers";
+@import "sizes";
+@import "ripple";
+@import "buttons";
+

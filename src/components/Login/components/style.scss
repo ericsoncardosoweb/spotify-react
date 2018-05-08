@@ -1,0 +1,31 @@
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.86);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background: #FFF;
+    padding: 2rem;
+    margin: 50px 15px;
+
+    h2{
+      font-size: 28px;
+      color: palette(brand, primary);
+      margin: 0 0 5px;
+    }
+
+    .button{
+      margin-top: 30px;
+    }
+  }
+} 
