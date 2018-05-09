@@ -7,7 +7,7 @@ const ModalLogin = ({ userAuth }) => (
     <div className="modal__content">
       <h2 className="modal__title">Bem Vindo!</h2>
       <p>Clique no botão a baixo para acessar sua conta.</p>
-      <button className='button flat primary block' onClick={
+      <button id="btn-follow" className='button flat primary block' onClick={
         console.log('iniciar login')
       }>Acessar minha conta</button>
     </div>

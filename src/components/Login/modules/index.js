@@ -1,18 +1,43 @@
-// ------------------------------------
-// Constants
-// ------------------------------------
-const client_id = 'efa4f35a45a6478b8616229dab22273a';
-const client_secret = '3150d7a5417e4e6cb8560340cf7746b9';
-const redirect_uri = 'http://localhost:3000';
-const scope = 'user-read-private user-read-email';
+import { setToken } from "../../../../../../../Users/erics/Desktop/Arquivos react/React/react-spotify-master/src/actions/tokenActions";
 
-// window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${client_id}&scope=${scope}&redirect_uri=${redirect_uri}/callback`;
+function getHashParams() {
+  var hashParams = {};
+  var e, r = /([^&;=]+)=?([^&;]*)/g,
+    q = window.location.hash.substring(1);
+  while (e = r.exec(q)) {
+    hashParams[e[1]] = decodeURIComponent(e[2]);
+  }
+  return hashParams;
+}
 
- 
-// ------------------------------------
-// Reducer
-// ------------------------------------
-// const userAuth = false
-// export default function counterReducer(state = userAuth) {
-//   return state
-// }
+function setToken()  {
+  // Set localStorage
+  // 
+}
+
+// Recupera o código de autenticação
+function appAuth() {
+  /**
+  * Obtains parameters from the hash of the URL
+  * @return Object
+  */
+
+  var params = getHashParams();
+
+  var access_token = params.access_token,
+    refresh_token = params.refresh_token,
+    error = params.error;
+
+  if (error) {
+    alert('There was an error during the authentication');
+  } else {
+    if (access_token) {
+      
+    } else {
+
+    }
+  }
+}
+
+
+export default appAuth
