@@ -1,0 +1,373 @@
+/*===============================
+=            BUTTONS            =
+===============================*/
+.button{
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: $btn-bd;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin: 0;
+  padding: rem($btn-gutter - 4) rem($btn-gutter + 2);
+
+  font-family: $btn-ff;
+  font-size: $btn-fz;
+  font-weight: $btn-fw; 
+  font-style: normal;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  text-shadow: none;
+
+  color: palette(brand, primary);
+  box-shadow: none;
+  transition: all 0.5s ease;
+
+  // bugs
+  -webkit-appearance: none;
+	-webkit-user-select: none;
+		 -moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+	will-change: '';
+	-webkit-tap-highlight-color: transparent;
+	speak: none;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+  *{
+    cursor: inherit;
+  }
+
+  // icons
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+	}
+
+	i{
+    font-size: 1.2em;
+    margin-right: 6px;
+
+    &:first-child:not(:last-child) {
+      margin-right: 5px;
+    }
+    &:last-child:not(:first-child) {
+      margin-left: 5px;
+    }
+
+    &.normal{
+      font-size: 21px;
+    }
+
+    &.small{
+      font-size: 14px;
+    }
+
+    &.right {
+      float: right;
+      line-height: 1.4;
+      margin-right: 0;
+    }
+	}
+
+  /*----------  Events  ----------*/
+	&:disabled{
+		opacity: 0.3;
+		cursor: default;
+	}
+
+  &:before {
+    content: '';
+  }
+
+  &:hover {
+    background-color: rgba(#000, 0.02);
+
+  }
+
+  /*----------  Helpers  ----------*/
+  @include buttonsHelpers();
+
+  /*----------  Colors  ----------*/
+  @each $color-name, $color in $btncolors {
+    @if (type-of($color) == 'color'){
+      &.#{$color-name} {
+        color: $color;
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover, &:active{
+          color: darken($color, 10%);
+        }
+      }
+    }
+  }
+
+  &.migrate {
+    color: palette(brand, migrate);
+  }
+
+  &.font {
+
+    &-color {
+
+      &--secondary {
+        color: palette(brand, secondary) !important;
+      }
+    } 
+  }
+
+  /*----------  Flat Buttons  ----------*/
+  &.flat{
+    background-color: palette(grey, ice);
+    color: palette(grey, heavy);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(#000,0.15);
+      transition: all 0.3s;
+      transform: translate(13%,190%) rotate(-30deg);
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      transition-delay: 0.2s;
+      opacity: 0;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(#fff,0.15);
+      transition: all 0.3s;
+      transform: translate(-13%,-190%) rotate(-30deg);
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      opacity: 0;
+    }
+
+    &:active {
+      background-color: darken(palette(grey, light), 10%);
+      border-color: darken(palette(grey, light), 10%);
+      color: findColorInvert(darken(palette(grey, light), 10%));
+    }
+
+    &:hover{
+      background-color: darken(palette(grey, light), 7%);
+      color: findColorInvert(darken(palette(grey, dark), 7%));
+      transition: background 0.25s ease-out 0.25s, color 0.25s ease-out 0.30s;
+
+      &:before{
+        transform: translate(0,0);
+        opacity: 1;
+      }
+      
+      &:after{
+        transform: translate(0,0);
+        opacity: 1;
+      }
+    }
+
+    &.circle{
+
+    }
+
+    @each $color-name, $color in $btncolors {
+      @if (type-of($color) == 'color'){
+        &.#{$color-name} {
+          color:  findColorInvert($color);
+          background-color: $color;
+          border-color: $color;
+
+          &:active {
+            background-color: darken($color, 10%);
+            border-color: darken($color, 10%);
+            color: findColorInvert(darken($color, 10%));
+          }
+
+          &:hover{
+            background-color: darken($color, 7%);
+            color: findColorInvert(darken($color, 7%));
+            transition: background 0.25s ease-out 0.25s, color 0.25s ease-out 0.30s;
+          }
+
+
+        }
+      }
+    }//each
+
+
+  }
+
+  /*----------  Outlined Buttons  ----------*/
+  &.outlined{
+    border: solid 1px palette(grey, light);
+    background-color: transparent;
+    color: palette(grey, heavy);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      border: 1px solid rgba(255,255,255,0.5);
+     transition: all 0.3s;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      background-color: rgba(255,255,255,0.25);
+      transform: scale(0.5,0.5);
+      transition: all 0.3s;
+    }
+
+    &:hover{
+      &:before{
+        opacity: 0;
+        transform: scale(1.2,1.2);
+      }
+
+      &:after{
+        opacity: 1;
+        transform: scale(1,1);
+      }
+    }
+
+
+    &:active{
+      background-color: transparent;
+      border-color: darken(palette(grey, light), 10%);
+      color: darken(palette(grey, light), 10%);
+    }
+
+    &:not(.circle) {
+      &:hover{
+        color: darken(palette(grey, dark), 7%);
+        transition: border 0.25s ease-out 0.25s, color 0.25s ease-out 0.30s;
+      }
+
+    }
+
+    &.circle{
+
+      &:hover{
+        border: solid 1px transparent!important;
+      }
+    }
+
+
+    @each $color-name, $color in $btncolors {
+      @if (type-of($color) == 'color'){
+        &.outlined.#{$color-name} {
+          color: $color;
+          border-color: $color;
+
+          &:active{
+            border-color: darken($color, 10%);
+            color: darken($color, 10%);
+          }
+
+          &:not(.circle) {
+            &:hover{
+              color: darken($color, 7%);
+              transition: background 0.25s ease-out 0.25s, color 0.25s ease-out 0.30s;
+            }
+
+
+          }
+
+          // Circle
+          &.circle{
+
+            &:hover{
+              border: solid 1px transparent!important;
+            }
+
+          }
+        }
+      }
+    }//each
+  }
+
+  /*----------  Align Buttons  ----------*/
+  
+  &--right {
+    float: right;
+  }
+
+  &--left {
+    float: left;
+  }
+  
+  
+  /*----------  Size Buttons  ----------*/
+  @include buttonsSizes();
+
+  &.font-small {
+    
+  }
+
+  &.massive {
+
+    &--font-small {
+      font-size: em(14);
+      font-weight: 400;
+      padding: 20px;
+    }
+
+    &--font-medium {
+      font-size: em(20);
+      font-weight: 400;
+      padding: 18px;
+    }
+
+    &--font-large {
+      font-size: em(24);
+      font-weight: 400;
+      padding: 21px;
+    }
+
+    &--text-normal {
+     text-transform: none;
+    }
+  }
+
+  &.small {
+    &--font-medium {
+      font-size: em(14);
+    }
+  }
+ 
+}
+/*=====  End of BUTTONS  ======*/

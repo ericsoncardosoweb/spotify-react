@@ -1,0 +1,49 @@
+@import './../../styles/settings/all';
+
+#page-authentication{
+  position: relative;
+  
+  
+  > .row {
+    min-height: 100vh; 
+
+    >div{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .form-brand{
+    text-align: center;
+
+    img{
+      margin-bottom: 15px;
+    }
+  }
+  
+  .form-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    from{
+      max-width: 390px;
+      margin: 0 auto;
+    }
+
+    p{
+      font-size: 18px;
+      color: palette(text, light);
+      margin: 0  0 20px;
+    }
+  
+    &__body{
+      max-width: 412px; 
+    }
+  }
+
+
+}

@@ -1,4 +1,5 @@
 @import "container",
+        "bootstrap",
         "sections";
 
 body, *{
@@ -15,13 +16,5 @@ section, .container{
 }
 
 .main{
-  display: flex;
-  flex-wrap: wrap;
   
-  &__content{
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 82%;
-    padding: 20px;
-  }
 }

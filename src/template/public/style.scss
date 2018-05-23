@@ -1,0 +1,27 @@
+.page-authentication{
+  position: relative;
+  
+  
+  > .row { 
+    min-height: 100vh; 
+
+    >div{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .form-brand{
+    text-align: center;
+
+    img{
+      margin-bottom: 15px;
+    }
+  }
+  
+  
+
+
+}

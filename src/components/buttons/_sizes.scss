@@ -1,0 +1,17 @@
+@mixin buttonsSizes() {
+  @each $size-name, $size-code in $btnsizes {
+    &.#{$size-name} {
+      font-size: $size-code;
+    }
+  }
+
+  &.large{
+    padding: 16px 15px;
+  }
+
+  &.big{
+    padding: 20px 15px;
+  }
+
+
+}

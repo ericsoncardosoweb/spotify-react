@@ -10,21 +10,21 @@
         white: #fff,
     ),
     brand: (
-        primary: #161616, //Principal
-        secondary: #000, //Alternativa
-        accent: #999, //Destaque com a cor principal
+        primary: #3B86FF, //Principal
+        secondary: #005BA2, //Alternativa
+        accent: #005BA2, //Destaque com a cor principal
         contrast: #fafafa, //Contraste com a cor principal
         highlight: #fff, //Destaque
     ),
     text: (
         primary: #161616,
         secondary: #000,
-        default: #999,
-        light: #fafafa,
+        default: #43425D,
+        light: rgb(195, 197, 198),
         ice: #fff,
     ),
     border: (
-        default: #585858,
+        default: #E9E9F0,
         light: #ddd,
         clean: #eee,
         dark: #222
@@ -40,4 +40,22 @@
 
 
 // Colors Variables
-$bg-body: palette(brand, primary);
+$bg-body: #FFF;
+
+
+:root {
+    // Colors
+    --color-primary: rgb(59, 134, 255); //Principal
+    --color-secondary: rgb(0, 91, 162); //Alternativa
+    --color-accent: rgb(0, 91, 162); //Destaque com a cor principal
+    --color-contrast: rgb(250, 250, 250); //Contraste com a cor principal
+    --color-highlight: rgb(255, 255, 255);
+    --color-dark: rgb(67, 66, 93);
+
+    // Stages
+    --color-success: rgb(29, 202, 101);
+    --color-danger: rgb(200, 45, 45);
+    --color-alert: rgb(210, 159, 44);
+    --color-warning: rgb(226, 130, 27);
+    --color-info: rgb(44, 187, 210);
+}

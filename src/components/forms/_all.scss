@@ -1,0 +1,33 @@
+/*=============================================
+=            FORMS            =
+=============================================*/
+// Variables
+$input-text-color: palette(text, default);
+$input-border-color: palette(border, default);
+$input-font-size: 16px;
+$input-font-family: $font-primary;
+$input-radius: 0;
+$input-shadow: rgba(0, 0, 0, 0.17) 0px 5px 21px;
+
+// Imports
+@import
+"checks/all",
+"formatting",
+"form-line",
+"fields",
+"validations";
+
+
+
+// Resets
+
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 90px white inset;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active { 
+  -webkit-box-shadow: 0 0 0 90px white inset;
+  -webkit-text-fill-color: initial;
+}

@@ -1,0 +1,29 @@
+[type=radio] + span {
+  margin-bottom: 10px;
+
+  &:before {
+    border-radius: 50%;
+  }
+  &:after {
+    top: 7px;
+    left: 4.6px;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background: palette(brand, primary-light);
+  }
+}
+
+[type=radio]:checked + span {
+  &:before {
+    border: 1px solid $border-color;
+  }
+}
+[type=radio]:checked[disabled] + span {
+  &:before {
+    border: 1px solid $disabled-checked-color;
+  }
+  &:after {
+    background: $disabled-checked-color;
+  }
+}
