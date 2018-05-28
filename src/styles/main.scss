@@ -3,16 +3,13 @@
  * Main Style
  *
 * */ 
-
-
+ 
 @import "settings/all"; 
  
 // Layout 
-@import "base/all"; 
-@import "formatting/all";  
-@import "utils/all"; 
-@import "custom/all"; 
- 
-// Components
-@import './../components/forms/all';
-@import './../components/buttons/all';
+@import "base/all";
+@import "formatting/all"; 
+
+//  Components
+
+@import "./components/buttons/all"

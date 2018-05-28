@@ -8,6 +8,7 @@ export default class PublicLayout extends Component {
         const user = this.props.user;
         return (
             <section className="entry-content">
+                {console.log(user)}
                 <Component route={route}/>
             </section>
         );

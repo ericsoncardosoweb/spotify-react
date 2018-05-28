@@ -11,8 +11,7 @@ export const USER = {
     }
 };
 
-
-export class UserActions {
+ export class UserActions {
     constructor(dispatch) {
         this.dispatch = dispatch;
         this.login = this.login.bind(this);
@@ -21,7 +20,8 @@ export class UserActions {
         this.userToken = 'user';
     }
     login() {
-        localStorage.setItem(this.userToken, true);
+        localStorage.setItem(this.userToken, true);        
+
         return this.dispatch({ type: USER.login.success });
     }
     logout() {
